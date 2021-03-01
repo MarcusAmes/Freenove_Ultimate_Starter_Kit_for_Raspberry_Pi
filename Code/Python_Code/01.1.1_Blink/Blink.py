@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+
 ########################################################################
 # Filename    : Blink.py
 # Description : Basic usage of GPIO. Let led blink.
@@ -20,10 +21,10 @@ def loop():
     while True:
         GPIO.output(ledPin, GPIO.HIGH)  # make ledPin output HIGH level to turn on led
         print ('led turned on >>>')     # print information on terminal
-        time.sleep(1)                   # Wait for 1 second
+        time.sleep(0.1)                   # Wait for 1 second
         GPIO.output(ledPin, GPIO.LOW)   # make ledPin output LOW level to turn off led
         print ('led turned off <<<')
-        time.sleep(1)                   # Wait for 1 second
+        time.sleep(0.1)                   # Wait for 1 second
 
 def destroy():
     GPIO.cleanup()                      # Release all GPIO
